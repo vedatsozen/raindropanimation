@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAIN DROP ANIMATION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<h1>RAINY WEATHER</h1>
+
+<p class="explanation">This rain drop animation is made with pure javascript and coded by Front End Developer Vedat Sözen</p>
+
+</body>
+
+<script>
+
+function createDrop() {
+
+let randomLeft = Math.floor(Math.random() * 1000 );
+
+let newDrop = document.createElement("img");
+
+newDrop.src = "drop.png";
+
+newDrop.classList.add("drop");
+
+newDrop.style.position = "absolute";
+
+newDrop.style.left = randomLeft + "px";
+
+document.body.appendChild(newDrop);
+
+}
+
+createDrop();
+
+setInterval(createDrop,6000)
+
+</script>
+</html>
